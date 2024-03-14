@@ -1,9 +1,13 @@
 const button = document.getElementById("btn");
+const color = document.querySelector(".color");
 
 const colors = ["#e74c3c", "#8e44ad", "#3498db", "#e67e22", "#2ecc71", "#ff5733", "f9ff33", "#f1f5f8", "red", "green", "blue"];
 
 button.addEventListener("click", () => {
-    document.body.style.backgroundColor = colors[getRandomNumber()];
+    let hexColor = colors[getRandomNumber()];
+    document.body.style.backgroundColor = hexColor;
+    color.textContent = hexColor;
+
 })
 
 function getRandomNumber() {
